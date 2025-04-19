@@ -123,6 +123,11 @@
                     window.addEventListener("resize", function () {
                         engine.resize();
                     });
+            // Blockiere Scrollen beim Zoomen im Canvas
+            canvas.addEventListener('wheel', function (e) {
+            e.preventDefault();
+            }, { passive: false });
+
         </script>
     </body>
 </html>
